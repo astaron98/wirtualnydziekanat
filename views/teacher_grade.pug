@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h2 TEACHER
+
+    h6="Student id: " + grade.studentid
+    h6="Subject: " + grade.subject
+    h6 Grades
+    ul.list-group
+    each g, i in grade.grades
+        li.list-group-item
+            h7= g.grade + ' | ' + g.description
+    a.btn.btn-default.btn-primary(href='/teacher/grade/edit/' + grade._id) Edytuj
+    a.btn.btn-danger.delete-grade(href='/teacher', data-id=grade._id) Usuń
+
+

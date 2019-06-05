@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    h2 TEACHER
+
+    h3 Edytuj ocenę
+    form(method='POST', action="/teacher/grade/edit/"+grade._id)
+        #form-group
+            label Przedmiot: 
+            input.form-control(name='subject', type='text', value = grade.subject)
+        #form-group
+            label Id ucznia: 
+            input.form-control(name='studentid', type='text', value=grade.studentid)
+        #form-group
+            label Oceny: 
+            input.form-control(name='grade', type='text', value=grade.grades)
+        input.btn.btn-primary(type='submit', value='Submit')
+

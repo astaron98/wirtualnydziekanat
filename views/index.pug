@@ -1,0 +1,12 @@
+extends layout
+
+block content
+    h2 Logowanie
+    form(method='POST', action="/")
+        #form-group
+            label Login: 
+            input.form-control(name='login', type='text')
+        #form-group
+            label Hasło: 
+            input.form-control(name='password', type='password')
+        input.btn.btn-primary(type='submit', value='Log in')

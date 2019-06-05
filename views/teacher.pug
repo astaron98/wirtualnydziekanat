@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    h2 TEACHER
+    br
+    a.btn.btn-default.btn-primary(href='/teacher/add') Dodaj nową ocenę
+    br 
+    br
+
+    each gr, i in grades
+        h5="Subject: " + gr.subject + " student id: " +gr.studentid
+        ul.list-group
+            each grade, j in gr.grades
+                li.list-group-item
+                    a(href="/teacher/grade/"+gr._id)
+                        h7= grade.grade + ' | ' + grade.description
+                    
+
+

@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    h2 TEACHER
+
+    h3 Dodaj ocenę
+    form(method='POST', action="/teacher/add")
+        #form-group
+            label Przedmiot: 
+            input.form-control(name='subject', type='text')
+        #form-group
+            label Id ucznia: 
+            input.form-control(name='studentid', type='text')
+        #form-group
+            label Ocena: 
+            input.form-control(name='grade', type='text')
+        #form-group
+            label Opis: 
+            input.form-control(name='description', type='text')
+        input.btn.btn-primary(type='submit', value='Submit')
+

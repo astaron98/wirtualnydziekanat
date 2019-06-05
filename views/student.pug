@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h2 STUDENT
+    h4 Your student id: #{studentid}
+    each sub, i in grades
+        h5=sub.subject
+        ul.list-group
+            each grade, j in sub.grades
+                li.list-group-item= grade.grade + ' | ' + grade.description

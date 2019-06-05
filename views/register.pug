@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    h2 Rejestracja nowego użytkownika
+    form(method='POST', action="/register")
+        #form-group
+            label Imię: 
+            input.form-control(name='firstname', type='text')
+        #form-group
+            label Nazwisko: 
+            input.form-control(name='lastname', type='text')
+        #form-group
+            label Numer indeksu: 
+            input.form-control(name='id', type='text')
+        #form-group
+            label Login: 
+            input.form-control(name='login', type='text')
+        #form-group
+            label Hasło: 
+            input.form-control(name='password', type='password')
+        input.btn.btn-primary(type='submit', value='Register')
